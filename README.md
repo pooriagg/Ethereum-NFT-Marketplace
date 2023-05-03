@@ -1,5 +1,5 @@
 # Ethereum-NFT-Marketplace
-Ethereum Powered 100% Decentralized NFT Marketplace, Built For Mass Adoption !
+Ethereum Powered 100% Decentralized And Upgradable NFT Marketplace, Built For Mass Adoption !
 
 # Marketplace
 > Visit the marketplace live in ----> https://pooriagg.github.io/Ethereum-NFT-Marketplace
