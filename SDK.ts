@@ -106,9 +106,16 @@ class SDK implements ISDK {
     constructor(
         _abi: any[],
         _address: string,
-        _web3JsHttps: Web3, //! Extention Wallet Provider
+        _web3JsHttps: Web3, //! Extention Wallet Provider ---pass--> new Web3(window.ethereum)
         _userAccount: string
     ) {
+	if (
+		!_web3JsHttps.utils.isAddress(_userAccount) &&
+		!_web3JsHttps.utils.isAddress(_address)
+	) {
+		throw new Error("Invalid address entered!");
+	};
+		
         this.ABI = _abi;
         this.Address = _address as string,
         this.Web3Js = _web3JsHttps;
@@ -177,6 +184,13 @@ class SDK implements ISDK {
         _price: string | bn
     ): Promise<any> {
         try {
+	    if (
+		!this.Web3Js.utils.isAddress(_contractAddress) &&
+		!this.Web3Js.utils.isAddress(_token)
+	    ) {
+		throw new Error("Invalid address entered!");
+	    };
+		
             const receipt = await this.Marketplace.methods.createSellOrder(
                 _contractAddress,
                 _nftId,
@@ -203,6 +217,12 @@ class SDK implements ISDK {
         _price: string | bn
     ): Promise<any> {
         try {
+	    if (
+		!this.Web3Js.utils.isAddress(_token)
+	    ) {
+		throw new Error("Invalid address entered!");
+	    };
+		
             const receipt = await this.Marketplace.methods.createBid(
                 _orderId,
                 _token,
@@ -340,6 +360,12 @@ class SDK implements ISDK {
 
     public async getUserContract(_user: string): Promise<any> {
         try {
+	    if (
+		!this.Web3Js.utils.isAddress(_user)
+	    ) {
+		throw new Error("Invalid address entered!");
+	    };
+		
             const data = this.Marketplace.methods.getUserContract(_user).call();
 
             Promise.resolve({ data });
