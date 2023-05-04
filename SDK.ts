@@ -107,7 +107,6 @@ class SDK implements ISDK {
         _abi: any[],
         _address: string,
         _web3JsHttps: Web3, //! Extention Wallet Provider
-        _web33Wss: Web3,
         _userAccount: string
     ) {
         this.ABI = _abi;
@@ -333,11 +332,7 @@ class SDK implements ISDK {
         try {
             const data = this.Marketplace.methods.bid(_bidId).call();
 
-            Promise.resolve(
-                {
-                    data
-                }
-            );
+            Promise.resolve({ data });
         } catch {
             console.error("Error occured while trying to fetch bid info !");
 
@@ -349,11 +344,7 @@ class SDK implements ISDK {
         try {
             const data = this.Marketplace.methods.getUserContract(_user).call();
 
-            Promise.resolve(
-                {
-                    data
-                }
-            );
+            Promise.resolve({ data });
         } catch {
             console.error("Error occured while trying to fetch user-contract address !");
 
