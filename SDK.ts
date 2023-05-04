@@ -125,12 +125,10 @@ class SDK implements ISDK {
 
     public static async waitTx(
         _txHash: string,
-        _web3Provider: string
+        _web3Provider: string //! Pass wallet provider like MetaMask
     ): Promise<void> {
         try {
-            const web3 = new Web3(
-                new Web3.providers.HttpProvider(_web3Provider)
-            );
+            const web3 = new Web3(_web3Provider); //! Window.ethereum
 
             let info: any;
 
