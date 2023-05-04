@@ -135,37 +135,37 @@ class SDK implements ISDK {
 
             let info: any;
 
-			while(!info) {
-				const res = await web3.eth.getTransactionReceipt(_txHash);
+	    while(!info) {
+		const res = await web3.eth.getTransactionReceipt(_txHash);
 
-				info = res ?? undefined;
-			};
+		info = res ?? undefined;
+	    };
 
-			if (info) {
-				if (info.status) {
-					console.log("Transaction Mined successfully .");
+	    if (info) {
+		if (info.status) {
+		  console.log("Transaction Mined successfully .");
 
-                    Promise.resolve(
-                        {
-                            mined: true,
-                            status: true
-                        }
-                    );
-				} else {
-					console.log("Transaction Mined BUT failed .");
+                  Promise.resolve(
+                       {
+                           mined: true,
+                           status: true
+                       }
+                  );
+		} else {
+		   console.log("Transaction Mined BUT failed .");
 
-                    Promise.resolve(
-                        {
-                            mined: true,
-                            status: false
-                        }
-                    );
-				};
-			} else {
-				console.warn("Error while wating for the transaction to be mined !");
+                   Promise.resolve(
+                      {
+                          mined: true,
+                          status: false
+                      }
+                   );
+		};
+	   } else {
+		  console.warn("Error while wating for the transaction to be mined !");
 
-                Promise.reject(null);
-			};
+                  Promise.reject(null);
+	   };
         } catch {
             console.error("Error occured while wating for the transaction to be mine !");
 
