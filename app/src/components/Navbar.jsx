@@ -52,7 +52,7 @@ const Navbar = ({ connect, state, connecting }) => {
                 <div className="container-fluid">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <Link to="/" className="navbar-brand">
-                            <img src="https://etherscan.io/images/svg/brands/ethereum-original.svg" width="38" height="38" alt="Ethereum" title="Ethereum NFT Marketplace"/>
+                            <img src="https://etherscan.io/images/svg/brands/ethereum-original.svg" width="38" height="38" alt="ethereum" title="Ethereum NFT Marketplace"/>
                         </Link>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
