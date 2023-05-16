@@ -380,15 +380,17 @@ const App = () => {
   }, [ userAccount, ethereum, web3, connect ]);
 
   return (
-    <Context.Provider value={{
-      ethereum,
-      web3,
-      web3Http,
-      web3Ws,
-      userAccount,
-      txValidator: validator_tx,
-      callValidator: validator_call
-    }}>
+    <Context.Provider
+      value={{
+        ethereum,
+        web3,
+        web3Http,
+        web3Ws,
+        userAccount,
+        txValidator: validator_tx,
+        callValidator: validator_call
+      }}
+    >
       <>
         <Navbar connect={connect} state={state} connecting={connecting}/>
         <Routes>
