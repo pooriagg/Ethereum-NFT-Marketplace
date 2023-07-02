@@ -2,6 +2,7 @@
 Ethereum Powered 100% Decentralized And Upgradable NFT Marketplace, Built For Mass Adoption !
 
 # Marketplace
+Before visiting the DApp make sure that you have installed a web3 wallet like MetaMask !
 > Visit the marketplace live in ----> https://pooriagg.github.io/Ethereum-NFT-Marketplace
 
 NOTE :
