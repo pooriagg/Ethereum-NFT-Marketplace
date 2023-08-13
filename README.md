@@ -1,4 +1,4 @@
-# Ethereum-NFT-Marketplace
+# Ethereum-NFT-Marketplace (V1)
 Ethereum Powered 100% Decentralized And Upgradable NFT Marketplace, Built For Mass Adoption !
 
 # Marketplace
