@@ -59,7 +59,7 @@ const MintNFT = ({ state }) => {
           
                         //? upload nft data to IPFS
                         const client = new NFTStorage({
-                          token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDJDNjFjQzM5NGVmMzFlMkFBNDdFM2U0MjU4ZjQwM0JhNzc3OEUxRDMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3NDU2OTUwMDc4MSwibmFtZSI6InBvb3JpYSJ9.9KHy_G7daGcIz6EHOA8mLh8-egBljjftwAF7ASgMSg4"
+                          token: "<API_KEY>"
                         });
                         const file = new File([ img ], img.name, { type: img.type });
           
