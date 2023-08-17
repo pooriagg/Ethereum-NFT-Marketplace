@@ -31,11 +31,11 @@ const App = () => {
   const web3 = useMemo(() => new Web3(window.ethereum), []);
 
   const web3Http = useMemo(() => createAlchemyWeb3(
-    "https://polygon-mumbai.g.alchemy.com/v2/7d3CawiE6tv5NwqMVvTCyrVL6jGRiK8X"
+    "<API_KEY>"
   ), []);
   
   const web3Ws = useMemo(() => createAlchemyWeb3(
-    "wss://polygon-mumbai.g.alchemy.com/v2/7d3CawiE6tv5NwqMVvTCyrVL6jGRiK8X"
+    "<API_KEY>"
   ), []);
 
   const { ethereum } = window;
