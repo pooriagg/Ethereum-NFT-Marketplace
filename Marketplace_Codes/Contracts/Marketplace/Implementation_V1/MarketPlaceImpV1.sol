@@ -50,27 +50,27 @@ contract MarketPlaceImpV1 {
     address[] public tokens;
 
     struct SellOrder {
-        address seller;
-        address token;
-        address contractAddr;
         uint256 nftId;
-        address buyer;
         uint256 price;
         uint256 startedAt;
         uint256 endedAt;
+        address seller;
+        address token;
+        address contractAddr;
+        address buyer;
         bool isCanceled;
         bool isEnded;
     }
     uint256 public sellOrderCount = 1;
 
     struct Bid {
-        address bidder;
-        address token;
-        address nftOwner;
         uint256 sellOrderId;
         uint256 price;
         uint256 biddedAt;
         uint256 bidEndedAt;
+        address bidder;
+        address token;
+        address nftOwner;
         bool isCanceled;
         bool isEnded;
     }
@@ -88,12 +88,35 @@ contract MarketPlaceImpV1 {
     mapping (address => bool) private marketTokens;
 
     //* Events
-    event SellOrderCreated(address indexed creator, uint256 indexed orderId, uint256 time);
-    event BidCreated(address indexed bidder, address indexed contractAddr, uint256 indexed sellOrderId, uint bidId, uint256 time);
-    event BidCanceled(address indexed bidder, uint256 indexed bidId, uint256 indexed orderId, uint256 time);
-    event SellOrderCanceled(address indexed seller, uint256 indexed orderId, uint256 time);
-    event NFTContractCreated(address indexed creator, address indexed contractAddr, uint256 time);
-    event BidAccepted(address indexed seller, address indexed buyer, uint256 indexed orderId, uint256 bidId, uint256 time);
+    event SellOrderCreated(
+        address indexed creator,
+        uint256 indexed orderId
+    );
+    event BidCreated(
+        address indexed bidder,
+        address indexed contractAddr,
+        uint256 indexed sellOrderId,
+        uint bidId
+    );
+    event BidCanceled(
+        address indexed bidder,
+        uint256 indexed bidId,
+        uint256 indexed orderId
+    );
+    event SellOrderCanceled(
+        address indexed seller,
+        uint256 indexed orderId
+    );
+    event NFTContractCreated(
+        address indexed creator,
+        address indexed contractAddr
+    );
+    event BidAccepted(
+        address indexed seller,
+        address indexed buyer,
+        uint256 indexed orderId,
+        uint256 bidId
+    );
     //*
 
     // guard
