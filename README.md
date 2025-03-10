@@ -14,7 +14,7 @@ After connecting your wallet if you are visiting for the first time, you must go
 # Development
 -Developres can read the docs to interact with the marketplace
 
-> Marketplace deployed at Polygon-Mumbai testnet network
+> Marketplace deployed at Polygon-Mumbai testnet network !(deprecated)!
 >
 > Marketplace proxy smart-contract address - 0x9D1411539d92F7F3eCa472ce27858b92fd4ED446
 > 
