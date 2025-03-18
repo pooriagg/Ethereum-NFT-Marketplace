@@ -12,7 +12,7 @@ NOTE :
 After connecting your wallet if you are visiting for the first time, you must go to the "My Profile" dashboard then create a new NFT collection then refresh the page to see the new added options to your dashboard, Happy minting!
 
 # Development
--Developres can read the docs to interact with the marketplace
+- Developres can read the docs to interact with the marketplace
 
 > Marketplace deployed at Polygon-Mumbai testnet network !(deprecated)!
 >
