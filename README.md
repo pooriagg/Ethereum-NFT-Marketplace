@@ -20,4 +20,4 @@ After connecting your wallet if you are visiting for the first time, you must go
 > 
 > Marketplace implementation smart-contract address - 0xa7484c4a7Ae8af9fdF4C8def7688268734B9cEFE
 
-(developer - pooriaSarkhanzade)
+( License -> GPL-v3 )
